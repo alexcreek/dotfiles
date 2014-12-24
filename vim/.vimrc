@@ -1,12 +1,15 @@
 """ General UI
+" Not sure what this does
+syntax enable
+
 " highlight matching brackets
 set showmatch
 
+" hide search results highlighting
+set nohlsearch
+
 " show line numbers
 "set number
-
-" Not sure what this does
-syntax enable
 
 
 """ Tabs/Spaces
