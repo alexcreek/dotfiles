@@ -1,7 +1,6 @@
 alias du='du -h --max-depth=1'
 alias ipt='iptables -vnL --line-numbers'
 alias ll='ls -lah'
-alias vi='vim'
 alias yum='yum -y'
 alias apt-get='apt-get -y'
 
