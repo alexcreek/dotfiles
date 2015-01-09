@@ -8,6 +8,9 @@ set showmatch
 " hide search results highlighting
 set nohlsearch
 
+" disable marks (last-line-jump)
+set viminfo='0
+
 " show line numbers
 "set number
 
