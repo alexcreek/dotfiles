@@ -1,4 +1,7 @@
 """ General UI
+" Disable Vim (enhaced) features
+set nocompatible
+
 " Not sure what this does
 syntax enable
 
