@@ -16,7 +16,18 @@ check_uid() {
     fi
 }
 
+usage () {
+    echo "Usage: $0 [-h] [uncommon]" > /dev/stderr
+    exit
+}
+
+
 check_uid
+
+if [[ "$1" == "-h" ]]; then 
+    usage
+fi
+
 if ! program-installed rsync ; then
     if program-installed yum ; then 
         yum -y install rsync 
@@ -25,8 +36,18 @@ if ! program-installed rsync ; then
     fi
 fi
 
+bin_source="bin/common/"
+if [[ $# -ge 1 ]]; then
+    if [[ "$1" == "uncommon" ]]; then
+        bin_source="bin/uncommon/"
+    else 
+        echo "ERROR: $1 not recognized" > /dev/stderr
+        usage
+    fi
+fi
+
 if [[ -d /usr/local/bin/ ]]; then
-    rsync -a bin/ /usr/local/bin/ &> /dev/null
+    rsync -r $bin_source /usr/local/bin/ &> /dev/null
     if [[ $? -eq 0 ]]; then
         echo "Bins successfully installed"
     else
