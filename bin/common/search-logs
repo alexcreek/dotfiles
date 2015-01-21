@@ -1,0 +1,26 @@
+#!/bin/bash
+usage() {
+    echo "Usage: $0 [IP]"
+    exit
+}    
+
+check_uid() {
+    if [[ $(id -u) -ne 0 ]]; then
+        echo "Must be ran as root"
+        exit
+    fi
+}
+
+check_uid
+
+if [[ $# -ne 1 ]]; then
+    usage
+fi
+
+if [[ -d /var/log/apache2/ ]]; then 
+    grep -ri "$1" /var/log/apache2/
+fi
+
+if [[ -d /var/log/httpd/ ]]; then 
+    grep -ri "$1" /var/log/httpd/
+fi

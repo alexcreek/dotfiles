@@ -1,0 +1,24 @@
+#!/bin/bash
+usage() {
+    echo "Usage: $0 [PATH]"
+    exit
+}    
+
+check_uid() {
+    if [[ $(id -u) -ne 0 ]]; then
+        echo "Must be ran as root"
+        exit
+    fi
+}
+
+check_uid
+
+if [[ $# -ne 1 ]]; then
+    usage
+fi
+
+path="$1"
+
+chown -R www-data:www-data ${path}/wp-admin/ ${path}/wp-includes/ ${path}/wp-content
+chown www-data:www-data ${path}/wp-*.php ${path}/readme.html ${path}/license.txt ${path}/index.php ${path}/xmlrpc.php
+
