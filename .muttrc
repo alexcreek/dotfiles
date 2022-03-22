@@ -1,3 +1,0 @@
-#set folder="~/Maildir"
-set folder="/var/spool/mail/${USER}"
-set sort=reverse-date-received
