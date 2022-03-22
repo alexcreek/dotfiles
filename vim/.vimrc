@@ -55,3 +55,5 @@ execute pathogen#infect()
 let g:syntastic_yaml_checkers = ['yamllint']    " pip install yamllint --user
 let g:syntastic_sh_checkers = ['shellcheck']    " brew install shellcheck
 let g:syntastic_json_checkers = ['jsonlint']    " npm install -g jsonlint
+let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_python_exec = 'python3'
