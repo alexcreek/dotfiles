@@ -1,6 +1,9 @@
 " use normal colors
 set background=light
 
+" make the delete key work correctly
+set backspace+=start
+
 " enable filetype detection
 filetype plugin on
 
@@ -34,9 +37,9 @@ set softtabstop=2
 " affects what happens when you press >>, << or ==.
 set shiftwidth=2
 
-
 """ indentation overrides
 autocmd Filetype python set sts=4 sw=4
+autocmd Filetype go set sts=4 sw=4
 autocmd Filetype yacc set sts=8 sw=8
 autocmd Filetype javascript set sts=4 sw=4
 
