@@ -38,3 +38,6 @@ GPG_TTY=$(tty)
 # path
 export PATH="$HOME/bin:/opt/homebrew/bin:/Users/alex/.local/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.3.5
