@@ -9,21 +9,10 @@ suggestion-mode=yes
 unsafe-load-any-extension=no
 [MESSAGES CONTROL]
 confidence=
-disable=print-statement,
-        parameter-unpacking,
-        unpacking-in-except,
-        old-raise-syntax,
-        backtick,
-        long-suffix,
-        old-ne-operator,
-        old-octal-literal,
-        import-star-module-level,
-        non-ascii-bytes-literal,
-        invalid-unicode-literal,
+disable=import-star-module-level,
         raw-checker-failed,
         bad-inline-option,
         locally-disabled,
-        locally-enabled,
         file-ignored,
         suppressed-message,
         useless-suppression,
@@ -66,8 +55,6 @@ disable=print-statement,
         zip-builtin-not-iterating,
         range-builtin-not-iterating,
         filter-builtin-not-iterating,
-        using-cmp-argument,
-        eq-without-hash,
         div-method,
         idiv-method,
         rdiv-method,
@@ -92,7 +79,6 @@ disable=print-statement,
         missing-docstring,
         invalid-name,
         too-many-arguments,
-        too-many-local,
         too-few-public-methods,
         too-many-instance-attributes
 enable=c-extension-no-member
@@ -146,8 +132,6 @@ indent-after-paren=4
 indent-string='    '
 max-line-length=120
 max-module-lines=1000
-no-space-check=trailing-comma,
-               dict-separator
 single-line-class-stmt=no
 single-line-if-stmt=no
 [BASIC]
@@ -213,4 +197,4 @@ int-import-graph=
 known-standard-library=
 known-third-party=enchant
 [EXCEPTIONS]
-overgeneral-exceptions=Exception
+overgeneral-exceptions=builtins.Exception
