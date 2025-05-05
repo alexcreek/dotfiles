@@ -2,4 +2,5 @@
 
 install:
 	@which stow &> /dev/null || brew install stow
-	stow bash bin vim linters
+	stow --dotfile bash vim linters
+	stow bin
