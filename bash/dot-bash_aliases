@@ -5,7 +5,7 @@ alias fl='git log'
 alias fd='git --no-pager diff'
 alias fdd='git diff'
 alias fr='git remote -v'
-alias fpp="git pull origin $(git branch --show-current)"
+alias fpp='git pull origin $(git branch --show-current)'
 
 function fp {
   BRANCH="$1"
