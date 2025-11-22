@@ -4,6 +4,7 @@ alias fc='git commit'
 alias fl='git log'
 alias fd='git --no-pager diff'
 alias fdd='git diff'
+alias fa='git add'
 alias fr='git remote -v'
 alias fpp='git pull origin $(git branch --show-current)'
 
@@ -15,8 +16,8 @@ function fp {
 # random
 alias ll='ls -lhG'
 alias ls='ls -G'
-alias jj='jrnl'
-alias jls='jrnl -to today'
+alias jjs='jrnl'
+alias jj='jrnl -to today'
 
 # ssh
 alias go-jump='ssh alex@jumphost'
