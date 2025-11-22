@@ -1,0 +1,33 @@
+setopt prompt_subst
+autoload -Uz vcs_info 
+precmd () { vcs_info } 
+zstyle ':vcs_info:*' formats '%F{magenta}(%b)%f ' 
+PS1='%{%F{39}%}%1~ $vcs_info_msg_0_%{%F{39}%}➤ %{%f%}'
+
+# git
+alias ff='git status'
+alias fc='git commit'
+alias fl='git log'
+alias fd='git --no-pager diff'
+alias fdd='git diff'
+alias fr='git remote -v'
+alias fpp='git pull origin $(git branch --show-current)'
+
+function fp {
+  BRANCH="$1"
+  git push origin "${BRANCH:=$(git branch --show-current)}"
+}
+
+# random
+alias ll='ls -lhG'
+alias ls='ls -G'
+alias jjs='jrnl'
+alias jj='jrnl -to today'
+
+# ssh
+alias go-jump='ssh alex@jumphost'
+alias asdf='ssh michael'
+alias asdfasdf='ssh dev'
+
+# uvx
+. "$HOME/.local/bin/env"

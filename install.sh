@@ -1,3 +1,3 @@
 #!/bin/bash -x 
-stow --dotfile bash vim linters
+stow --dotfile bash zsh vim linters
 stow bin
