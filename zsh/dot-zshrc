@@ -1,12 +1,15 @@
-setopt prompt_subst
-autoload -Uz vcs_info 
-precmd () { vcs_info } 
-zstyle ':vcs_info:*' formats '%F{magenta}(%b)%f ' 
-PS1='%{%F{39}%}%1~ $vcs_info_msg_0_%{%F{39}%}➤ %{%f%}'
-
 # path
 export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+
+# shell config
+setopt prompt_subst
+autoload -Uz vcs_info
+
+# prompt config
+precmd () { vcs_info } 
+zstyle ':vcs_info:*' formats '%F{magenta}(%b)%f ' 
+PS1='%{%F{39}%}%1~ $vcs_info_msg_0_%{%F{39}%}➤ %{%f%}'
 
 # git
 alias ff='git status'
